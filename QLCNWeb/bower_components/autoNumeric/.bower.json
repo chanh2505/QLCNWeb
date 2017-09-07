@@ -1,0 +1,14 @@
+{
+  "name": "autoNumeric",
+  "homepage": "https://github.com/BobKnothe/autoNumeric",
+  "version": "2.0.13",
+  "_release": "2.0.13",
+  "_resolution": {
+    "type": "version",
+    "tag": "v2.0.13",
+    "commit": "0da0560213bec236d4501b0fefe266cbee3bd125"
+  },
+  "_source": "https://github.com/BobKnothe/autoNumeric.git",
+  "_target": "2.0.13",
+  "_originalSource": "autoNumeric"
+}

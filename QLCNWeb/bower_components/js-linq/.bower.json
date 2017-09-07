@@ -1,0 +1,33 @@
+{
+  "name": "wm123450405",
+  "authors": [
+    "491029934@qq.com"
+  ],
+  "description": "linq js",
+  "main": "dist/linq.min.js",
+  "keywords": [
+    "linq",
+    "js",
+    "javascript",
+    "Enumerable"
+  ],
+  "license": "MIT",
+  "homepage": "http://wm123450405.github.io/linqjs/",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "version": "2.1.18",
+  "_release": "2.1.18",
+  "_resolution": {
+    "type": "version",
+    "tag": "2.1.18",
+    "commit": "3bafedf61e6bcffc4e07b3a0e08fef8a9e5a37b4"
+  },
+  "_source": "https://github.com/wm123450405/linqjs.git",
+  "_target": "2.1.18",
+  "_originalSource": "js-linq"
+}

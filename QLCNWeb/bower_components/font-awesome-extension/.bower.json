@@ -1,0 +1,13 @@
+{
+  "name": "font-awesome-extension",
+  "homepage": "https://github.com/AndreLGava/font-awesome-extension",
+  "_release": "09d8024905",
+  "_resolution": {
+    "type": "branch",
+    "branch": "master",
+    "commit": "09d80249058ee8018a45da30add4339289dbb466"
+  },
+  "_source": "https://github.com/AndreLGava/font-awesome-extension.git",
+  "_target": "*",
+  "_originalSource": "font-awesome-extension"
+}

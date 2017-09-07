@@ -1,0 +1,7 @@
+G:\Work\HOME\QLCNWeb\Util\bin\Debug\Util.dll
+G:\Work\HOME\QLCNWeb\Util\bin\Debug\Util.pdb
+G:\Work\HOME\QLCNWeb\Util\bin\Debug\AutoMapper.dll
+G:\Work\HOME\QLCNWeb\Util\bin\Debug\AutoMapper.xml
+G:\Work\HOME\QLCNWeb\Util\obj\Debug\Util.csprojResolveAssemblyReference.cache
+G:\Work\HOME\QLCNWeb\Util\obj\Debug\Util.dll
+G:\Work\HOME\QLCNWeb\Util\obj\Debug\Util.pdb

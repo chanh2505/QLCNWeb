@@ -1,0 +1,15 @@
+G:\Work\HOME\QLCNWeb\DBCore\bin\Debug\DBCore.dll.config
+G:\Work\HOME\QLCNWeb\DBCore\bin\Debug\DBCore.dll
+G:\Work\HOME\QLCNWeb\DBCore\bin\Debug\DBCore.pdb
+G:\Work\HOME\QLCNWeb\DBCore\bin\Debug\EntityFramework.dll
+G:\Work\HOME\QLCNWeb\DBCore\bin\Debug\EntityFramework.SqlServer.dll
+G:\Work\HOME\QLCNWeb\DBCore\bin\Debug\Ninject.dll
+G:\Work\HOME\QLCNWeb\DBCore\bin\Debug\EntityFramework.xml
+G:\Work\HOME\QLCNWeb\DBCore\bin\Debug\EntityFramework.SqlServer.xml
+G:\Work\HOME\QLCNWeb\DBCore\bin\Debug\Ninject.xml
+G:\Work\HOME\QLCNWeb\DBCore\obj\Debug\DBCore.dll
+G:\Work\HOME\QLCNWeb\DBCore\obj\Debug\DBCore.pdb
+G:\Work\HOME\QLCNWeb\DBCore\bin\Debug\EntityFramework.SqlServerCompact.dll
+G:\Work\HOME\QLCNWeb\DBCore\bin\Debug\System.Data.SqlServerCe.dll
+G:\Work\HOME\QLCNWeb\DBCore\bin\Debug\EntityFramework.SqlServerCompact.xml
+G:\Work\HOME\QLCNWeb\DBCore\obj\Debug\DBCore.csprojResolveAssemblyReference.cache

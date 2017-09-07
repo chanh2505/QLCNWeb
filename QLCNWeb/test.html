@@ -1,0 +1,33 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+	<meta charset="utf-8" />
+    <script src="bower_components/jquery/dist/jquery.js"></script>
+    <script type="text/javascript">
+        function getAjax()
+        {
+            var a = '{ "ID": 1 }';
+            $.ajax({
+                contentType:"application/json",
+                dataType: "json",
+                method: "POST",
+                data:a,
+                url: "http://localhost:4221/Service.svc/GetContract"
+            }).done(function (a) {
+                debugger;
+                console.log(a);
+            }).fail(function (b) {
+                debugger;
+            });
+        }
+
+    </script>
+</head>
+
+<body>
+
+    <input type="button" name="test" onclick="getAjax();"/>
+</body>
+
+</html>

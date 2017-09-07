@@ -1,0 +1,60 @@
+﻿<html>
+<head>
+    <link href="./bower_components/bootstrap/dist/css/bootstrap.css" rel="stylesheet" />
+    <link href="./bower_components/bootstrap/dist/css/bootstrap-theme.css" rel="stylesheet" />
+    <link href="./bower_components/font-awesome/css/font-awesome.css" rel="stylesheet" />
+    <link href="./bower_components/jqueryui/themes/base/jquery-ui.css" rel="stylesheet" />
+    <link href="./bower_components/eonasdan-bootstrap-datetimepicker/build/css/bootstrap-datetimepicker.css" rel="stylesheet" />
+    <link href="css/main.css" rel="stylesheet" />
+    <link href="./bower_components/jquery.tablesorter/dist/css/dragtable.mod.min.css" rel="stylesheet" />
+    <link href="./bower_components/jquery.tablesorter/dist/css/jquery.tablesorter.pager.min.css" rel="stylesheet" />
+    <link href="./bower_components/jquery.tablesorter/dist/css/theme.green.min.css" rel="stylesheet" />
+    <link href="./bower_components/jquery.tablesorter/dist/css/filter.formatter.min.css" rel="stylesheet" />
+    <script src="./bower_components/jquery/dist/jquery.js"></script>
+    <script src="./bower_components/bootstrap/dist/js/bootstrap.js"></script>
+    <script src="bower_components/jqueryui/jquery-ui.js"></script>
+    <script src="./bower_components/jquery-validate/dist/jquery.validate.js"></script>
+    <script src="./bower_components/bootbox/bootbox.js"></script>
+    <script src="./bower_components/jquery.tablesorter/dist/js/jquery.tablesorter.combined.js"></script>
+    <script src="./bower_components/jquery.tablesorter/dist/js/extras/jquery.tablesorter.pager.min.js"></script>
+    <script src="./bower_components/autoNumeric/dist/autoNumeric.min.js"></script>
+    <script src="./bower_components/moment/min/moment-with-locales.min.js"></script>
+    <script src="./bower_components/eonasdan-bootstrap-datetimepicker/build/js/bootstrap-datetimepicker.min.js"></script>
+    <script src="js/common.js"></script>
+    <script src="js/contract.js"></script>
+    <script src="js/listSaleContract.js"></script>
+</head>
+<body class="">
+    <div class="container" id="page">
+        <div id="header"></div>
+        <div id="body">
+            <h3>Danh sách các hợp đồng</h3>
+
+            <form id="contract_container">
+                <div class="form-group clearfix">
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                        <div class="table_scroll_small acT6 col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                            <table class="table table-bordered table_style partner_table tablesorter" id="tbContract">
+                                <thead class="bg_green">
+                                    <tr>
+                                        <th>Số hợp đồng</th>
+                                        <th>Khách hàng</th>
+                                        <th>Tổng tiền</th>
+                                        <th>Còn thiếu</th>
+                                        <th class="action">Thao tác</th>
+                                    </tr>
+                                </thead>
+                                <tbody></tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </form>
+
+        </div>
+        <div id="footer"></div>
+    </div>
+
+</body>
+
+</html>

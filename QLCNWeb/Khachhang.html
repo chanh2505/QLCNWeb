@@ -1,0 +1,191 @@
+﻿<html>
+<head>
+    <link href="./bower_components/bootstrap/dist/css/bootstrap.css" rel="stylesheet" />
+    <link href="./bower_components/bootstrap/dist/css/bootstrap-theme.css" rel="stylesheet" />
+    <link href="./bower_components/font-awesome/css/font-awesome.css" rel="stylesheet" />
+    <link href="css/main.css" rel="stylesheet" />
+    <link href="./bower_components/jquery.tablesorter/dist/css/dragtable.mod.min.css" rel="stylesheet" />
+    <link href="./bower_components/jquery.tablesorter/dist/css/jquery.tablesorter.pager.min.css" rel="stylesheet" />
+    <link href="./bower_components/jquery.tablesorter/dist/css/theme.green.min.css" rel="stylesheet" />
+    <link href="./bower_components/jquery.tablesorter/dist/css/filter.formatter.min.css" rel="stylesheet" />
+    <script src="./bower_components/jquery/dist/jquery.js"></script>
+    <script src="./bower_components/bootstrap/dist/js/bootstrap.js"></script>
+    <script src="./bower_components/jquery-validate/dist/jquery.validate.js"></script>
+    <script src="./bower_components/bootbox/bootbox.js"></script>
+    <script src="./bower_components/jquery.tablesorter/dist/js/jquery.tablesorter.combined.js"></script>
+    <script src="./bower_components/jquery.tablesorter/dist/js/extras/jquery.tablesorter.pager.min.js"></script>
+    <script src="./bower_components/autoNumeric/dist/autoNumeric.min.js"></script>
+    <script src="js/common.js"></script>
+    <script src="js/khachhang.js"></script>
+</head>
+<script type="text/javascript">
+    $(document).ready(function () {
+        $("#header").load("./header.html");
+        var tableSortOptions = {
+            theme: 'green',
+            widthFixed: false,
+            widgets: ['zebra', 'resizable', 'filter'],
+            widgetOptions: {
+                resizable: true,
+                // These are the default column widths which are used when the table is
+                // initialized or resizing is reset; note that the "Age" column is not
+                // resizable, but the width can still be set to 40px here
+                resizable_widths: ['15%', '15%', '20%', '10%', '10%', '10%', '10%', '10%']
+            }
+        };
+        var pagerOptions = {
+            container: $(".pager"),
+            output: 'Page {page:input} of {totalPages}',
+            page: 0,
+            size: 10,
+            savePages: true,
+            pageReset: 0,
+            removeRows: false,
+            cssNext: '.next', // next page arrow
+            cssPrev: '.prev', // previous page arrow
+            cssFirst: '.first', // go to first page arrow
+            cssLast: '.last', // go to last page arrow
+            cssPageDisplay: '.pagedisplay', // location of where the "output" is displayed
+            cssPageSize: '.pagesize', // page size selector - select dropdown that sets the "size" option
+            cssDisabled: 'disabled', // Note there is no period "." in front of this class name
+            cssErrorRow: 'tablesorter-errorRow'
+        };
+    });
+</script>
+<body class="">
+    <div class="container" id="page">
+        <div id="header"></div>
+        <div id="body">
+            <h3>Danh mục Khách Hàng</h3>
+
+            <form id="partner_container">
+                <div class="form-group clearfix">
+                    <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 pad_small0 padL0">
+                        <div class="col-lg-5 col-md-5 col-sm-12 col-xs-12 pad_small0">
+                            <label>
+                                Tên công ty: <span class="text_red copy_red">*</span>
+                            </label>
+                        </div>
+                        <div class="col-lg-7 col-md-7 col-sm-12 col-xs-12 padL7 padR0  pad_small0 pad_small_R0">
+                            <input type="text" id="txtCompanyName" name="CompanyName" class="form-control input-sm num_copy valid" placeholder="Điền tên công ty">
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 pad_small0 padL0">
+                        <div class="col-lg-5 col-md-5 col-sm-12 col-xs-12 pad_small0">
+                            <label>
+                                Họ tên người đại diện: <span class="text_red copy_red">*</span>
+                            </label>
+                        </div>
+                        <div class="col-lg-7 col-md-7 col-sm-12 col-xs-12 padL7 padR0  pad_small0 pad_small_R0">
+                            <input type="text" id="txtRepName" name="RepName" class="form-control input-sm num_copy valid" placeholder="Điền tên người đại diện">
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group clearfix">
+                    <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 pad_small0 padL0">
+                        <div class="col-lg-5 col-md-5 col-sm-12 col-xs-12 pad_small0">
+                            <label>
+                                Số điện thoại công ty:
+                            </label>
+                        </div>
+                        <div class="col-lg-7 col-md-7 col-sm-12col-xs-12 padL7 padR0  pad_small0 pad_small_R0">
+                            <input type="text" id="txtCompanyPhone" name="CompanyPhone" class="form-control input-sm num_copy valid" placeholder="Số điện thoại công ty">
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 pad_small0 padL0">
+                        <div class="col-lg-5 col-md-5 col-sm-12 col-xs-12 pad_small0">
+                            <label>
+                                Số điện thoại người liên hệ: <span class="text_red copy_red">*</span>
+                            </label>
+                        </div>
+                        <div class="col-lg-7 col-md-7 col-sm-12col-xs-12 padL7 padR0  pad_small0 pad_small_R0">
+                            <input type="text" id="txtRepPhone" name="RepPhone" class="form-control input-sm num_copy valid" placeholder="Số điện thoại người liên hệ">
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group clearfix">
+                    <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 pad_small0 padL0">
+                        <div class="col-lg-5 col-md-5 col-sm-12 col-xs-12 pad_small0">
+                            <label>
+                                MST: <span class="text_red copy_red">*</span>
+                            </label>
+                        </div>
+                        <div class="col-lg-7 col-md-7 col-sm-12 col-xs-12 padL7 padR0 pad_small0 pad_small_R0">
+                            <input type="text" id="txtMST" name="MST" class="form-control input-sm num_copy valid" placeholder="Mã số thuế">
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 pad_small0 padL0">
+                        <div class="col-lg-5 col-md-5 col-sm-12 col-xs-12 pad_small0">
+                            <label>
+                                Địa chỉ:
+                            </label>
+                        </div>
+                        <div class="col-lg-7 col-md-7 col-sm-12 col-xs-12 padL7 padR0 pad_small0 pad_small_R0">
+                            <input type="text" id="txtAddress" name="Address" class="form-control input-sm num_copy valid" placeholder="Địa chỉ công ty">
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group clearfix">
+                    <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 pad_small0 padL0">
+                        <div class="col-lg-5 col-md-5 col-sm-12 col-xs-12 pad_small0">
+                            <label>
+                                Nợ: <span class="text_red copy_red">*</span>
+                            </label>
+                        </div>
+                        <div class="col-lg-7 col-md-7 col-sm-12 col-xs-12 padL7padR0  pad_small0 pad_small_R0">
+                            <input type="text" id="txtDebt" name="Debt" class="form-control input-sm num_copy valid" placeholder="Công nợ">
+                        </div>
+                    </div>
+                </div>
+                
+
+                <div class="form-group clearfix">
+                    <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 pad_small0 padL0">
+                        <div class="col-lg-5 col-md-5 col-sm-12 col-xs-12 pad_small0">
+                        </div>
+                        <div class="col-lg-7 col-md-7 col-sm-12 col-xs-12 padL7 padR0  pad_small0 pad_small_R0">
+                            <button type="button" class="btn btn-sm btn_save" id="btnSave">
+                                <i class="fa fa-floppy-o" aria-hidden="true"></i> Lưu
+                            </button>
+
+                            <button type="button" class="btn btn-sm" id="btnClear">
+                                <i class="fa fa-times" aria-hidden="true"></i> Hủy
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group clearfix">
+                    <div class="table_scroll_small acT6">
+                        <table class="table table-bordered table_style partner_table tablesorter" id="tbProduct">
+                            <thead class="bg_green">
+                                <tr>
+                                    <th>Tên công ty</th>
+                                    <th>MST</th>
+                                    <th>Tên người đại diện</th>
+                                    <th>Địa chỉ</th>
+                                    <th>Nợ</th>
+                                    <th class="action">Thao tác</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                
+                            </tbody>
+                        </table>
+                        <div id="pager" class="pager">
+                            <img src="./bower_components/jquery.tablesorter/dist/css/images/first.png" class="first" />
+                            <img src="./bower_components/jquery.tablesorter/dist/css/images/prev.png" class="prev" />
+                            <span class="pagedisplay"></span>
+                            <img src="./bower_components/jquery.tablesorter/dist/css/images/next.png" class="next" />
+                            <img src="./bower_components/jquery.tablesorter/dist/css/images/last.png" class="last" />
+                        </div>
+                    </div>
+                </div>
+            </form>
+
+        </div>
+        <div id="footer"></div>
+    </div>
+</body>
+
+</html>

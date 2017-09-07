@@ -1,0 +1,127 @@
+﻿<html>
+<head>
+    <link href="./bower_components/bootstrap/dist/css/bootstrap.css" rel="stylesheet" />
+    <link href="./bower_components/bootstrap/dist/css/bootstrap-theme.css" rel="stylesheet" />
+    <link href="./bower_components/font-awesome/css/font-awesome.css" rel="stylesheet" />
+    <link href="css/main.css" rel="stylesheet" />
+    <link href="./bower_components/jquery.tablesorter/dist/css/dragtable.mod.min.css" rel="stylesheet" />
+    <link href="./bower_components/jquery.tablesorter/dist/css/jquery.tablesorter.pager.min.css" rel="stylesheet" />
+    <link href="./bower_components/jquery.tablesorter/dist/css/theme.green.min.css" rel="stylesheet" />
+    <link href="./bower_components/jquery.tablesorter/dist/css/filter.formatter.min.css" rel="stylesheet" />
+    <script src="./bower_components/jquery/dist/jquery.js"></script>
+    <script src="./bower_components/bootstrap/dist/js/bootstrap.js"></script>
+    <script src="./bower_components/jquery-validate/dist/jquery.validate.js"></script>
+    <script src="./bower_components/bootbox/bootbox.js"></script>
+    <script src="./bower_components/jquery.tablesorter/dist/js/jquery.tablesorter.combined.js"></script>
+    <script src="./bower_components/jquery.tablesorter/dist/js/extras/jquery.tablesorter.pager.min.js"></script>
+    <script src="./bower_components/autoNumeric/dist/autoNumeric.min.js"></script>
+    <script src="js/common.js"></script>
+    <script src="js/contract.js"></script>
+    <script src="js/addProductContract.js"></script>
+</head>
+<body class="">
+    <div class="container" id="page">
+        <div id="header"></div>
+        <div id="body">
+            <h3>Thêm sản phẩm vào hợp đồng</h3>
+
+            <form id="partner_container">
+                <div class="form-group clearfix">
+                    <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 pad_small0 padL0">
+                        <div class="col-lg-5 col-md-5 col-sm-12 col-xs-12 pad_small0">
+                            <label>
+                                Sản phẩm: <span class="text_red copy_red">*</span>
+                            </label>
+                        </div>
+                        <div class="col-lg-7 col-md-7 col-sm-12 col-xs-12 padL7 padR0  pad_small0 pad_small_R0">
+                            <select id="slProduct"></select>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="form-group clearfix">
+                    <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 pad_small0 padL0">
+                        <div class="col-lg-5 col-md-5 col-sm-12 col-xs-12 pad_small0">
+                            <label>
+                                Số lượng: <span class="text_red copy_red">*</span>
+                            </label>
+                        </div>
+                        <div class="col-lg-7 col-md-7 col-sm-12 col-xs-12 padL7 padR0  pad_small0 pad_small_R0">
+                            <input type="text" id="txtAmount" name="Amount" class="form-control input-sm num_copy valid" placeholder="Số lượng sản phẩm">
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group clearfix">
+                    <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 pad_small0 padL0">
+                        <div class="col-lg-5 col-md-5 col-sm-12 col-xs-12 pad_small0">
+                            <label>
+                                Đơn giá bán
+                            </label>
+                        </div>
+                        <div class="col-lg-7 col-md-7 col-sm-12col-xs-12 padL7 padR0  pad_small0 pad_small_R0">
+                            <input type="text" id="txtPrice" name="Price" class="form-control input-sm num_copy valid" placeholder="Giá báo khách hàng">
+                        </div>
+                    </div>
+                    <div class="form-group clearfix">
+                        <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 pad_small0 padL0">
+                            <div class="col-lg-5 col-md-5 col-sm-12 col-xs-12 pad_small0">
+                                <label>
+                                    Đơn giá gốc: <span class="text_red copy_red">*</span>
+                                </label>
+                            </div>
+                            <div class="col-lg-7 col-md-7 col-sm-12col-xs-12 padL7 padR0  pad_small0 pad_small_R0">
+                                <input type="text" id="txtCost" name="Cost" class="form-control input-sm num_copy valid" placeholder="Đon giá gốc">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group clearfix">
+                    <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 pad_small0 padL0">
+                        <div class="col-lg-5 col-md-5 col-sm-12 col-xs-12 pad_small0">
+                            <label>
+                                Tổng thành tiền:
+                            </label>
+                        </div>
+                        <div class="col-lg-7 col-md-7 col-sm-12 col-xs-12 padL7 padR0 pad_small0 pad_small_R0">
+                            <input type="text" id="txtTotalPrice" disabled class="form-control input-sm num_copy valid">
+                        </div>
+                    </div>
+                    <div class="form-group clearfix">
+                        <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 pad_small0 padL0">
+                            <div class="col-lg-5 col-md-5 col-sm-12 col-xs-12 pad_small0">
+                                <label>
+                                    Tổng thành tiền (giá gốc):
+                                </label>
+                            </div>
+                            <div class="col-lg-7 col-md-7 col-sm-12 col-xs-12 padL7 padR0 pad_small0 pad_small_R0">
+                                <input type="text" id="txtTotalCost" disabled class="form-control input-sm num_copy valid">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="form-group clearfix">
+                    <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 pad_small0 padL0">
+                        <div class="col-lg-5 col-md-5 col-sm-12 col-xs-12 pad_small0">
+                        </div>
+                        <div class="col-lg-7 col-md-7 col-sm-12 col-xs-12 padL7 padR0  pad_small0 pad_small_R0">
+                            <button type="button" class="btn btn-sm btn_save" id="btnSave">
+                                <i class="fa fa-floppy-o" aria-hidden="true"></i> Thêm
+                            </button>
+
+                            <button type="button" class="btn btn-sm" id="btnClear">
+                                <i class="fa fa-times" aria-hidden="true"></i> Hủy
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+            </form>
+
+        </div>
+        <div id="footer"></div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,16 @@
+{
+  "name": "ASP.NET",
+  "private": true,
+  "dependencies": {
+    "jquery": "3.2.1",
+    "bootstrap": "3.3.7",
+    "jquery-validate": "1.16.0",
+    "font-awesome": "4.7.0",
+    "autoNumeric": "2.0.13",
+    "bootbox": "4.4.0",
+    "jquery.tablesorter": "2.27.8",
+    "jqueryui": "1.12.1",
+    "eonasdan-bootstrap-datetimepicker": "4.17.43",
+    "momentjs": "2.18.1"
+  }
+}
